@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_preguntados/game/juego.dart';
 import 'package:flutter_preguntados/main.dart';
