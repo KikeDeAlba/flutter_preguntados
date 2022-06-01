@@ -1,5 +1,5 @@
 # Preguntados
- Proyecto de flutter para programacion
+ Proyecto de flutter para programacion.
 
 ## Integrantes de equipo:
 - Luz Paola Renteria Sanchez
