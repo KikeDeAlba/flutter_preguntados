@@ -1,7 +1,12 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_preguntados/game/juego.dart';
 import 'package:flutter_preguntados/main.dart';
 
-var nJ = 1;
+var nJ = 0;
+var n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0;
+const Style = TextStyle(color: Colors.white, fontSize: 19);
 
 class jugar extends StatelessWidget {
   const jugar({Key? key}) : super(key: key);
@@ -24,81 +29,100 @@ class jugar extends StatelessWidget {
               SizedBox(height: 30),
               Container(
                 alignment: Alignment.center,
-                child: Text('Selecciona el numero de competidores:',
-                    style: TextStyle(color: Colors.white, fontSize: 19)),
+                child:
+                    Text('Selecciona el numero de competidores:', style: Style),
               ),
               SizedBox(
                 height: 20,
               ),
               Container(
                 alignment: Alignment.center,
-                child: const MyCustomForm(),
-              )
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    FlatButton(
+                      onPressed: () => {
+                        nJ = 2,
+                        runApp(MaterialApp(
+                          home: juego(),
+                        ))
+                      },
+                      child: Text(
+                        '2P',
+                        style: Style,
+                      ),
+                      color: Colors.grey,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    FlatButton(
+                      onPressed: () => {
+                        nJ = 3,
+                        runApp(MaterialApp(
+                          home: juego(),
+                        ))
+                      },
+                      child: Text(
+                        '3P',
+                        style: Style,
+                      ),
+                      color: Colors.grey,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    FlatButton(
+                      onPressed: () => {
+                        nJ = 4,
+                        runApp(MaterialApp(
+                          home: juego(),
+                        ))
+                      },
+                      child: Text(
+                        '4P',
+                        style: Style,
+                      ),
+                      color: Colors.grey,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    FlatButton(
+                      onPressed: () => {
+                        nJ = 5,
+                        runApp(MaterialApp(
+                          home: juego(),
+                        ))
+                      },
+                      child: Text(
+                        '5P',
+                        style: Style,
+                      ),
+                      color: Colors.grey,
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 500,
+              ),
+              Container(
+                  alignment: Alignment.bottomRight,
+                  child: FlatButton.icon(
+                    onPressed: () => runApp(MaterialApp(
+                      home: Home(),
+                    )),
+                    icon: Icon(Icons.door_back_door),
+                    label: Text(
+                      'Atras',
+                      style: Style,
+                    ),
+                    color: Colors.grey,
+                  ))
             ],
           )),
     );
-  }
-}
-
-class MyCustomForm extends StatefulWidget {
-  const MyCustomForm();
-
-  @override
-  MyCustomFormState createState() {
-    return MyCustomFormState();
-  }
-}
-
-// Create a corresponding State class.
-// This class holds data related to the form.
-class MyCustomFormState extends State<MyCustomForm> {
-  // Create a global key that uniquely identifies the Form widget
-  // and allows validation of the form.
-  //
-  // Note: This is a GlobalKey<FormState>,
-  // not a GlobalKey<MyCustomFormState>.
-  final _formKey = GlobalKey<FormState>();
-
-  @override
-  Widget build(BuildContext context) {
-    // Build a Form widget using the _formKey created above.
-    return Form(
-        key: _formKey,
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              TextFormField(
-                // The validator receives the text that the user has entered.
-                validator: (value) {
-                  var vN = value;
-                  if (value == null || value.isEmpty) {
-                    return 'Por favor ingresa un numero de 2 a 5';
-                  }
-                  nJ = int.parse(value);
-                  return null;
-                },
-                style: TextStyle(color: Colors.white),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: ElevatedButton(
-                  onPressed: () {
-                    // Validate returns true if the form is valid, or false otherwise.
-                    if (_formKey.currentState!.validate()) {
-                      // If the form is valid, display a snackbar. In the real world,
-                      // you'd often call a server or save the information in a database.
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Processing Data')),
-                      );
-                    }
-                  },
-                  child: const Text('Submit'),
-                ),
-              ),
-            ],
-          ),
-        ));
   }
 }

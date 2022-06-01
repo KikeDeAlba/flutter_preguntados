@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.pink[900],
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,7 +44,10 @@ class Home extends StatelessWidget {
                         home: jugar(),
                       ))),
                   icon: Icon(Icons.play_circle),
-                  label: Text(btnText),
+                  label: Text(
+                    btnText,
+                    style: Style,
+                  ),
                   color: Colors.grey,
                   padding: EdgeInsets.fromLTRB(30, 15, 30, 15),
                 )),
