@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_preguntados/Materias/ciencias.dart';
 import 'package:flutter_preguntados/Materias/espanol.dart';
 import 'package:flutter_preguntados/game/jugadores.dart';
 import 'package:flutter_preguntados/main.dart';
@@ -55,17 +56,6 @@ class juego extends StatelessWidget {
               SimpleRoundIconButton(
                 backgroundColor: Colors.grey,
                 buttonText: Text(
-                  'Historia         ',
-                  style: Style,
-                ),
-                icon: const Icon(Icons.account_box),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SimpleRoundIconButton(
-                backgroundColor: Colors.grey,
-                buttonText: Text(
                   'Geografia      ',
                   style: Style,
                 ),
@@ -81,6 +71,20 @@ class juego extends StatelessWidget {
                   style: Style,
                 ),
                 icon: const Icon(Icons.account_box),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SimpleRoundIconButton(
+                backgroundColor: Colors.grey,
+                buttonText: Text(
+                  'Ciencias',
+                  style: Style,
+                ),
+                icon: const Icon(Icons.account_box),
+                onPressed: () => runApp(MaterialApp(
+                  home: Ciencias(),
+                )),
               ),
               SizedBox(
                 height: 10,

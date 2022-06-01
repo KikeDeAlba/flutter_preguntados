@@ -20,7 +20,8 @@ class SimpleRoundButton extends StatelessWidget {
                 shape: MaterialStateProperty.all(RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(30.0))),
                 overlayColor: MaterialStateProperty.all(this.backgroundColor),
-                backgroundColor: MaterialStateProperty.all(this.backgroundColor),
+                backgroundColor:
+                    MaterialStateProperty.all(this.backgroundColor),
               ),
               child: new Row(
                 mainAxisAlignment: MainAxisAlignment.center,
