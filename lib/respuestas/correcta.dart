@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_preguntados/game/ganador.dart';
 import 'package:flutter_preguntados/game/juego.dart';
 import 'package:flutter_preguntados/game/jugadores.dart';
 
@@ -68,6 +69,70 @@ class Correcta extends StatelessWidget {
     }
   }
 
+  Validacion() {
+    darPunto();
+    if (turno == 1) {
+      if (n1 == 15) {
+        runApp(MaterialApp(
+          home: Ganador(),
+        ));
+      } else {
+        subirTurno();
+        runApp(MaterialApp(
+          home: juego(),
+        ));
+      }
+    }
+    if (turno == 2) {
+      if (n2 == 15) {
+        runApp(MaterialApp(
+          home: Ganador(),
+        ));
+      } else {
+        subirTurno();
+        runApp(MaterialApp(
+          home: juego(),
+        ));
+      }
+    }
+    if (turno == 3) {
+      if (n3 == 15) {
+        runApp(MaterialApp(
+          home: Ganador(),
+        ));
+      } else {
+        subirTurno();
+        runApp(MaterialApp(
+          home: juego(),
+        ));
+      }
+    }
+    if (turno == 4) {
+      if (n4 == 15) {
+        runApp(MaterialApp(
+          home: Ganador(),
+        ));
+      } else {
+        subirTurno();
+        runApp(MaterialApp(
+          home: juego(),
+        ));
+      }
+    }
+    if (turno == 5) {
+      if (n5 == 15) {
+        runApp(MaterialApp(
+          home: Ganador(),
+        ));
+      } else {
+        subirTurno();
+        runApp(MaterialApp(
+          home: juego(),
+        ));
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,13 +168,7 @@ class Correcta extends StatelessWidget {
                       style: Style,
                     ),
                     color: Colors.grey,
-                    onPressed: () => {
-                      darPunto(),
-                      subirTurno(),
-                      runApp(MaterialApp(
-                        home: juego(),
-                      ))
-                    },
+                    onPressed: () => {Validacion()},
                   ),
                 )
               ],

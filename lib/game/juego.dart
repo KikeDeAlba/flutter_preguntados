@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_preguntados/Materias/ciencias.dart';
 import 'package:flutter_preguntados/Materias/espanol.dart';
 import 'package:flutter_preguntados/Materias/geografia.dart';
+import 'package:flutter_preguntados/Materias/historia.dart';
 import 'package:flutter_preguntados/game/jugadores.dart';
 import 'package:flutter_preguntados/game/puntos.dart';
 import 'package:flutter_preguntados/main.dart';
@@ -107,9 +108,12 @@ class juego extends StatelessWidget {
               SimpleRoundIconButton(
                 backgroundColor: Colors.grey,
                 buttonText: Text(
-                  'Matematicas',
+                  'Historia         ',
                   style: Style,
                 ),
+                onPressed: () => runApp(MaterialApp(
+                  home: Historia(),
+                )),
                 icon: const Icon(Icons.account_box),
               ),
               SizedBox(
