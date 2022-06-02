@@ -8,9 +8,9 @@
 - Diego Gustavo Ventura Aguilar - Preguntas de Matematicas y Filosofia.
 - Alisson Sachiel Hernandez Mesa - Preguntas de Ciencias he Historia.
 
-## Con ayuda de:
-- SizaBla
-- El ceodelsexo
-
 ## Imagenes:
-![Inicio](inicio.png)
+![Inicio](/markdown/inicio.png)
+![pregunta](/markdown/pregunta.jpeg)
+![preguntas](/markdown/preguntas.jpeg)
+![scores](/markdown/score.jpeg)
+![seleccion](/markdown/seleccion.jpeg)
