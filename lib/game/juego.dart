@@ -83,17 +83,6 @@ class juego extends StatelessWidget {
               SimpleRoundIconButton(
                 backgroundColor: Colors.grey,
                 buttonText: Text(
-                  'Filosofia        ',
-                  style: Style,
-                ),
-                icon: const Icon(Icons.account_box),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SimpleRoundIconButton(
-                backgroundColor: Colors.grey,
-                buttonText: Text(
                   'Ciencias        ',
                   style: Style,
                 ),
