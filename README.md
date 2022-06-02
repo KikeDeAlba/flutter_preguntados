@@ -7,7 +7,7 @@
 ### Origen de la idea:
 La idea surgio gracias al Juego de azar movil llamada preguntados.
 
-### Origen del grupo promotor
+### Origen del grupo promotor:
 El grupo se formo gracias al proyecto en equipo 6AvProgramacion.
 
 ## Mercado
