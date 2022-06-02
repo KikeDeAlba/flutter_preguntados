@@ -10,7 +10,11 @@
 
 ## Imagenes:
 ![Inicio](/markdown/inicio.png)
+### Pregunta
 ![pregunta](/markdown/pregunta.jpeg)
+### Lista de preguntas
 ![preguntas](/markdown/preguntas.jpeg)
+### Tabla de puntos
 ![scores](/markdown/score.jpeg)
+### Menu de seleccion
 ![seleccion](/markdown/seleccion.jpeg)
