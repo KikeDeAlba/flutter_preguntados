@@ -163,6 +163,210 @@ class Ciencias extends StatelessWidget {
         ],
       );
     }
+    if (x == 4) {
+      return Column(
+        children: <Widget>[
+          Container(
+              alignment: Alignment.center,
+              child: Text(
+                '¿Los equinodermos son animales vertebrados o invertebrados?',
+                style: Style,
+              )),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Vertebrados', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Invertebrados',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+        ],
+      );
+    }
+    if (x == 5) {
+      return Column(
+        children: <Widget>[
+          Container(
+              alignment: Alignment.center,
+              child: Text(
+                '¿Cuántas patas tienen todos los arácnidos?',
+                style: Style,
+              )),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Tienen 6 patas', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Tienen 8 patas',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Tienen 10 patas',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+        ],
+      );
+    }
+    if (x == 6) {
+      return Column(
+        children: <Widget>[
+          Container(
+              alignment: Alignment.center,
+              child: Text(
+                '¿Cómo se llama el proceso por el que las plantas fabrican?',
+                style: Style,
+              )),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Tienen 6 patas', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Tienen 8 patas',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Tienen 10 patas',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+        ],
+      );
+    }
+    if (x == 7) {
+      return Column(
+        children: <Widget>[
+          Container(
+              alignment: Alignment.center,
+              child: Text(
+                'Parte no pertenece a la flor: cáliz, estambre, ovario, vasos liberianos, pistilo.',
+                style: Style,
+              )),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Cáliz', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Estambre',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Ovario',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Vasos liberianos',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+        ],
+      );
+    }
   }
 
   @override
