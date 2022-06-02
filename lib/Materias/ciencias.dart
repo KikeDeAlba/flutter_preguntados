@@ -264,7 +264,7 @@ class Ciencias extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('Tienen 6 patas', style: Style),
+                  buttonText: Text('Nutrición', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -276,27 +276,13 @@ class Ciencias extends StatelessWidget {
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
                   buttonText: Text(
-                    'Tienen 8 patas',
+                    'Fotosíntesis',
                     style: Style,
                   ),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
                           home: Correcta(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText: Text(
-                    'Tienen 10 patas',
-                    style: Style,
-                  ),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Mala(),
                         ))
                       })),
         ],
@@ -362,6 +348,160 @@ class Ciencias extends StatelessWidget {
                         pregunta++,
                         runApp(MaterialApp(
                           home: Correcta(),
+                        ))
+                      })),
+        ],
+      );
+    }
+    if (x == 8) {
+      return Column(
+        children: <Widget>[
+          Container(
+              alignment: Alignment.center,
+              child: Text(
+                '¿Dónde se encuentra corazón?',
+                style: Style,
+              )),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText:
+                      Text('En el lado derecho del tórax', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'En el lado izquierdo del tórax',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'En el tórax, entre los pulmones',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+        ],
+      );
+    }
+    if (x == 9) {
+      return Column(
+        children: <Widget>[
+          Container(
+              alignment: Alignment.center,
+              child: Text(
+                '¿Cómo se mide la masa de un cuerpo?',
+                style: Style,
+              )),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Con una probeta', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Con una báscula',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+        ],
+      );
+    }
+    if (x == 10) {
+      return Column(
+        children: <Widget>[
+          Container(
+              alignment: Alignment.center,
+              child: Text(
+                '¿Cuál de esas no es una máquina simple: la polea, el plano inclinado, la grúa y la palanca?',
+                style: Style,
+              )),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('La polea', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'El plano inclinado',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'La grúa',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'La palanca',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
                         ))
                       })),
         ],
