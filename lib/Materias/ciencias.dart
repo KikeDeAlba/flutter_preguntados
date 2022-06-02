@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_preguntados/buttons/simple_round_button.dart';
 import 'package:flutter_preguntados/game/jugadores.dart';
 import 'package:flutter_preguntados/respuestas/correcta.dart';
+import 'package:flutter_preguntados/respuestas/mala.dart';
 
 import '../main.dart';
 
@@ -23,9 +24,14 @@ class Ciencias extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
-                backgroundColor: Colors.grey,
-                buttonText: Text('Herbívoros', style: Style),
-              )),
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Herbívoros', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
@@ -33,16 +39,127 @@ class Ciencias extends StatelessWidget {
                   buttonText: Text(
                     'Carnívoros',
                     style: Style,
-                  ))),
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
                 backgroundColor: Colors.grey,
                 buttonText: Text('Omnívoros', style: Style),
-                onPressed: () => runApp(MaterialApp(
-                  home: Correcta(),
-                )),
+                onPressed: () => {
+                  pregunta++,
+                  runApp(MaterialApp(
+                    home: Correcta(),
+                  ))
+                },
               )),
+        ],
+      );
+    }
+    if (x == 2) {
+      return Column(
+        children: <Widget>[
+          Container(
+              alignment: Alignment.center,
+              child: Text(
+                'Según su forma de reproducirse, consideramos a las tortugas como animales...',
+                style: Style,
+              )),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Ovíparos', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Vivíparos',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+        ],
+      );
+    }
+    if (x == 3) {
+      return Column(
+        children: <Widget>[
+          Container(
+              alignment: Alignment.center,
+              child: Text(
+                '¿Qué tipo de animales son los murciélagos?',
+                style: Style,
+              )),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Mamíferos', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Aves',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Reptiles',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text(
+                    'Anfibios',
+                    style: Style,
+                  ),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
         ],
       );
     }

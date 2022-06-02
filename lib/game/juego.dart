@@ -10,6 +10,16 @@ var turno = 1;
 class juego extends StatelessWidget {
   const juego({Key? key}) : super(key: key);
 
+  resetGame() {
+    nJ = 2;
+    n1 = 0;
+    n2 = 0;
+    n3 = 0;
+    n4 = 0;
+    n5 = 0;
+    turno = 1;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,7 +88,7 @@ class juego extends StatelessWidget {
               SimpleRoundIconButton(
                 backgroundColor: Colors.grey,
                 buttonText: Text(
-                  'Ciencias',
+                  'Ciencias        ',
                   style: Style,
                 ),
                 icon: const Icon(Icons.account_box),
@@ -103,9 +113,12 @@ class juego extends StatelessWidget {
               Container(
                   alignment: Alignment.bottomRight,
                   child: FlatButton.icon(
-                    onPressed: () => runApp(MaterialApp(
-                      home: jugar(),
-                    )),
+                    onPressed: () => {
+                      resetGame(),
+                      runApp(MaterialApp(
+                        home: jugar(),
+                      ))
+                    },
                     icon: Icon(Icons.door_back_door),
                     label: Text(
                       'Atras',
