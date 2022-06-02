@@ -104,7 +104,7 @@ class jugar extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 500,
+                height: 480,
               ),
               Container(
                   alignment: Alignment.bottomRight,

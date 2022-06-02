@@ -117,7 +117,7 @@ class juego extends StatelessWidget {
                 icon: const Icon(Icons.account_box),
               ),
               SizedBox(
-                height: 80,
+                height: 70,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
