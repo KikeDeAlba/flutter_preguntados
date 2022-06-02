@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_preguntados/game/jugadores.dart';
 import 'package:flutter_preguntados/main.dart';
 
 import '../buttons/simple_round_button.dart';
 import '../respuestas/correcta.dart';
 import '../respuestas/mala.dart';
 
-class Spanol extends StatelessWidget {
-  const Spanol({Key? key}) : super(key: key);
+class geo extends StatelessWidget {
+  const geo({Key? key}) : super(key: key);
 
   static var pregunta = 1;
-
-  static var Style1 = TextStyle(color: Colors.white, fontSize: 10);
 
   Preguntar(x) {
     if (pregunta == 11) {
@@ -19,15 +18,14 @@ class Spanol extends StatelessWidget {
         Container(
             alignment: Alignment.center,
             child: Text(
-              '¿Por qué el resumen suele ser un texto breve? ',
-              style: Style1,
+              '¿Cuál de estos estados de EE.UU. no tiene frontera con Canadá?',
+              style: Style,
             )),
         Container(
             alignment: Alignment.center,
             child: SimpleRoundButton(
                 backgroundColor: Colors.grey,
-                buttonText: Text('Porque destaca los aspectos esenciales ',
-                    style: Style1),
+                buttonText: Text('Indiana', style: Style),
                 onPressed: () => {
                       pregunta++,
                       runApp(MaterialApp(
@@ -38,8 +36,7 @@ class Spanol extends StatelessWidget {
             alignment: Alignment.center,
             child: SimpleRoundButton(
                 backgroundColor: Colors.grey,
-                buttonText: Text('Porque intenta ser fiel al significado ',
-                    style: Style1),
+                buttonText: Text('Minnesota', style: Style),
                 onPressed: () => {
                       pregunta++,
                       runApp(MaterialApp(
@@ -50,8 +47,7 @@ class Spanol extends StatelessWidget {
             alignment: Alignment.center,
             child: SimpleRoundButton(
                 backgroundColor: Colors.grey,
-                buttonText:
-                    Text('Porque evita opiniones personales ', style: Style1),
+                buttonText: Text('Alaska', style: Style),
                 onPressed: () => {
                       pregunta++,
                       runApp(MaterialApp(
@@ -62,8 +58,7 @@ class Spanol extends StatelessWidget {
             alignment: Alignment.center,
             child: SimpleRoundButton(
                 backgroundColor: Colors.grey,
-                buttonText:
-                    Text('Porque es una técnica de estudio', style: Style1),
+                buttonText: Text('Maine', style: Style),
                 onPressed: () => {
                       pregunta++,
                       runApp(MaterialApp(
@@ -77,15 +72,14 @@ class Spanol extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: Text(
-                '¿Por qué el resumen suele ser un texto breve? ',
-                style: Style1,
+                '¿Cuál de estos estados de EE.UU. no tiene frontera con Canadá?',
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('Porque destaca los aspectos esenciales ',
-                      style: Style1),
+                  buttonText: Text('Indiana', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -96,8 +90,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('Porque intenta ser fiel al significado ',
-                      style: Style1),
+                  buttonText: Text('Minnesota', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -108,8 +101,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText:
-                      Text('Porque evita opiniones personales ', style: Style1),
+                  buttonText: Text('Alaska', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -120,8 +112,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText:
-                      Text('Porque es una técnica de estudio', style: Style1),
+                  buttonText: Text('Maine', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -135,59 +126,51 @@ class Spanol extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: Text(
-                '¿Cuál de los siguientes aspectos no tienen que ver con la elaboración de resúmenes?',
-                style: Style1,
+                '¿Cuál de estos países no era parte de la Unión Soviética?',
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text(
-                      'Elegir los elementos secundarios que debemos considerar',
-                      style: Style1),
+                  buttonText: Text('Polonia', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Georgia', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Ucrania', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Bielorrusia', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
                           home: Correcta(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText: Text(
-                      'Leer el texto varias veces, tantas como sea necesario',
-                      style: Style1),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Mala(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText: Text(
-                      'Asegurarnos de haber comprendido su significado',
-                      style: Style1),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Mala(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText: Text(
-                      'Diferencias los conceptos principales y los secundarios',
-                      style: Style1),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Mala(),
                         ))
                       })),
         ]);
@@ -197,14 +180,14 @@ class Spanol extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: Text(
-                '¿Qué es una autobiografía?',
-                style: Style1,
+                '¿Cuál de estas ciudades no es una capital nacional?',
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('Relatar mi vida', style: Style1),
+                  buttonText: Text('Sydney', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -215,8 +198,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText:
-                      Text('Relatos de vida de otra persona', style: Style1),
+                  buttonText: Text('Praga', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -227,8 +209,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('Leer el relato de la vida de un amigo',
-                      style: Style1),
+                  buttonText: Text('El Cairo', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -239,7 +220,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('Una forma de escritura', style: Style1),
+                  buttonText: Text('Bangkok', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -253,14 +234,36 @@ class Spanol extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: Text(
-                '¿Cuántas vocales hay? ',
-                style: Style1,
+                '¿Cuál de estas ciudades no bordea el Mar Mediterráneo?',
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('5 ', style: Style1),
+                  buttonText: Text('Alejandría', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Lisboa', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Barcelona', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -271,29 +274,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('6', style: Style1),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Mala(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText: Text('4 ', style: Style1),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Mala(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText: Text('7', style: Style1),
+                  buttonText: Text('Mónaco', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -307,14 +288,36 @@ class Spanol extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: Text(
-                '¿Cuántas letras tiene el abecedario? ',
-                style: Style1,
+                '¿Cuál de estos países nunca fue parte del Imperio Británico?',
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('27 ', style: Style1),
+                  buttonText: Text('Irlanda', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Nueva Zelanda', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Tailandia', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -325,29 +328,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('30', style: Style1),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Mala(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText: Text('24  ', style: Style1),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Mala(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText: Text('26', style: Style1),
+                  buttonText: Text('Kenia', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -361,27 +342,14 @@ class Spanol extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: Text(
-                '¿Cómo funcionan los signos de interrogación?',
-                style: Style1,
+                '¿Cuál de estas ciudades no está en el hemisferio sur?',
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text(
-                      'Representan gráficamente los signos de entonación a la pregunta',
-                      style: Style1),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Correcta(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText: Text('De adorno', style: Style1),
+                  buttonText: Text('Brisbane', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -392,8 +360,29 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText:
-                      Text('Para darle visión al enunciado', style: Style1),
+                  buttonText: Text('Johannesburgo', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Brasilia', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Colombo', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -407,27 +396,14 @@ class Spanol extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: Text(
-                '¿Cómo se usan los verbos en plural? ',
-                style: Style1,
+                '¿Cuál de estos países no está en América Central?',
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText:
-                      Text('Para referirse a muchas personas', style: Style1),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Correcta(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText:
-                      Text('Para referirse a una sola persona', style: Style1),
+                  buttonText: Text('Belice', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -438,7 +414,29 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('Para hablar en presente', style: Style1),
+                  buttonText: Text('Honduras', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Surinam', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Panamá', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -452,27 +450,14 @@ class Spanol extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: Text(
-                ' ¿Cómo se usa el verbo en singular? ',
-                style: Style1,
+                '¿Cuál de estas ciudades no bordea los Grandes Lagos?',
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText:
-                      Text('Se usa al hablar con una persona ', style: Style1),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Correcta(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText: Text('Se usa al hablar de muchas personas',
-                      style: Style1),
+                  buttonText: Text('Chicago', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -483,7 +468,29 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('Se usa de ambas formas', style: Style1),
+                  buttonText: Text('Cleveland', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Pittsburgh', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Toronto', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -497,28 +504,14 @@ class Spanol extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: Text(
-                ' ¿Qué es un borrador? ',
-                style: Style1,
+                '¿Cuál de estos países no es de mayoría musulmana?',
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text(
-                      'Es un escrito que forma parte del proceso de escritura ',
-                      style: Style1),
-                  onPressed: () => {
-                        pregunta++,
-                        runApp(MaterialApp(
-                          home: Correcta(),
-                        ))
-                      })),
-          Container(
-              alignment: Alignment.center,
-              child: SimpleRoundButton(
-                  backgroundColor: Colors.grey,
-                  buttonText:
-                      Text('Se usa para corregir errores', style: Style1),
+                  buttonText: Text('Marruecos', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -529,9 +522,29 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text(
-                      'Es un ejemplo de lo que se quiere llevar acabo',
-                      style: Style1),
+                  buttonText: Text('Albania', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Indonesia', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Correcta(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Etiopía', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -545,16 +558,14 @@ class Spanol extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: Text(
-                '¿Qué es un cuento? ',
-                style: Style1,
+                '¿Cuál de estos países no está reconocido por las Naciones Unidas?',
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text(
-                      'Narración breve que se argumenta sencillamente',
-                      style: Style1),
+                  buttonText: Text('Chipre', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -565,8 +576,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('Historia basada en un contexto de terror',
-                      style: Style1),
+                  buttonText: Text('Israel', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(
@@ -577,8 +587,18 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: SimpleRoundButton(
                   backgroundColor: Colors.grey,
-                  buttonText: Text('Una historia basada en hechos reales',
-                      style: Style1),
+                  buttonText: Text('Irán', style: Style),
+                  onPressed: () => {
+                        pregunta++,
+                        runApp(MaterialApp(
+                          home: Mala(),
+                        ))
+                      })),
+          Container(
+              alignment: Alignment.center,
+              child: SimpleRoundButton(
+                  backgroundColor: Colors.grey,
+                  buttonText: Text('Taiwán', style: Style),
                   onPressed: () => {
                         pregunta++,
                         runApp(MaterialApp(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_preguntados/Materias/ciencias.dart';
 import 'package:flutter_preguntados/Materias/espanol.dart';
+import 'package:flutter_preguntados/Materias/geografia.dart';
 import 'package:flutter_preguntados/game/jugadores.dart';
+import 'package:flutter_preguntados/game/puntos.dart';
 import 'package:flutter_preguntados/main.dart';
 import 'package:flutter_preguntados/buttons/simple_round_icon_button.dart';
 
@@ -70,6 +72,9 @@ class juego extends StatelessWidget {
                   style: Style,
                 ),
                 icon: const Icon(Icons.account_box),
+                onPressed: () => runApp(MaterialApp(
+                  home: geo(),
+                )),
               ),
               SizedBox(
                 height: 10,
@@ -110,9 +115,29 @@ class juego extends StatelessWidget {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                  alignment: Alignment.bottomRight,
-                  child: FlatButton.icon(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Container(
+                      child: FlatButton.icon(
+                    onPressed: () => {
+                      runApp(MaterialApp(
+                        home: Puntos(),
+                      ))
+                    },
+                    icon: Icon(Icons.account_balance),
+                    label: Text(
+                      'Puntos',
+                      style: Style,
+                    ),
+                    color: Colors.grey,
+                  )),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                      child: FlatButton.icon(
                     onPressed: () => {
                       resetGame(),
                       runApp(MaterialApp(
@@ -126,6 +151,8 @@ class juego extends StatelessWidget {
                     ),
                     color: Colors.grey,
                   ))
+                ],
+              )
             ],
           ),
         ));
