@@ -26,6 +26,16 @@ class Ganador extends StatelessWidget {
                   'Jugador ${turno} ha ganado el juego',
                   style: Style,
                 ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                child: FlatButton(
+                    child: Text(
+                      'Volver al inicio',
+                      style: Style,
+                    ),
+                    onPressed: () =>
+                        {resetGame(), runApp(MaterialApp(home: Home()))}),
               )
             ],
           ),
