@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 
 bar() {
-  return AppBar(
-    backgroundColor: Colors.transparent,
-    title: Text("Preguntados"),
-    centerTitle: true,
-  );
+  return Padding(
+      padding: EdgeInsets.fromLTRB(0, 20, 0, 680),
+      child: Container(
+        alignment: Alignment.center,
+        decoration: ShapeDecoration(
+            shape: Border.all(
+          color: Colors.red,
+          width: 2.0,
+        )),
+        child: Text('Preguntados',
+            style: TextStyle(color: Colors.black, fontSize: 30)),
+      ));
 }
