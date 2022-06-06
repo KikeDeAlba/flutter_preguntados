@@ -71,14 +71,14 @@ class Correcta extends StatelessWidget {
 
   Validacion() {
     darPunto();
-    if (n1 != 15 && n2 != 15 && n3 != 15 && n4 != 15 && n5 != 15) {
+    if (n1 != 7 && n2 != 7 && n3 != 7 && n4 != 7 && n5 != 7) {
       subirTurno();
       runApp(MaterialApp(
         home: juego(),
       ));
     } else {
       if (turno == 1) {
-        if (n1 == 15) {
+        if (n1 == 7) {
           runApp(MaterialApp(
             home: Ganador(),
           ));
@@ -90,7 +90,7 @@ class Correcta extends StatelessWidget {
         }
       }
       if (turno == 2) {
-        if (n2 == 15) {
+        if (n2 == 7) {
           runApp(MaterialApp(
             home: Ganador(),
           ));
@@ -102,7 +102,7 @@ class Correcta extends StatelessWidget {
         }
       }
       if (turno == 3) {
-        if (n3 == 15) {
+        if (n3 == 7) {
           runApp(MaterialApp(
             home: Ganador(),
           ));
@@ -114,7 +114,7 @@ class Correcta extends StatelessWidget {
         }
       }
       if (turno == 4) {
-        if (n4 == 15) {
+        if (n4 == 7) {
           runApp(MaterialApp(
             home: Ganador(),
           ));
@@ -126,7 +126,7 @@ class Correcta extends StatelessWidget {
         }
       }
       if (turno == 5) {
-        if (n5 == 15) {
+        if (n5 == 7) {
           runApp(MaterialApp(
             home: Ganador(),
           ));

@@ -15,45 +15,28 @@ class Home extends StatelessWidget {
     const portada = 'assets/titulo.png';
     const btnText = '¡Jugar!';
     return Scaffold(
-      backgroundColor: Colors.grey[900],
-      appBar: AppBar(
-        title: Text(appTitle),
-        centerTitle: true,
-        backgroundColor: Colors.pink[900],
+        body: Stack(children: <Widget>[
+      Image(
+        image: AssetImage('assets/inicio.png'),
       ),
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            SizedBox(
-              height: 30,
-            ),
-            Container(
-                alignment: Alignment.center,
-                child: Image(
-                    image: AssetImage(
-                  portada,
-                ))),
-            SizedBox(height: 100),
-            Container(
-                alignment: Alignment.center,
-                child: FlatButton.icon(
-                  onPressed: (() => runApp(MaterialApp(
-                        home: jugar(),
-                      ))),
-                  icon: Icon(Icons.play_circle),
-                  label: Text(
-                    btnText,
-                    style: Style,
-                  ),
-                  color: Colors.grey,
-                  padding: EdgeInsets.fromLTRB(30, 15, 30, 15),
-                )),
-          ],
-        ),
-      ),
-    );
+      Padding(
+          padding: EdgeInsets.fromLTRB(10, 130, 10, 20),
+          child: Container(
+              child: Column(children: <Widget>[
+            Padding(
+                padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
+                child: Container(
+                    margin: EdgeInsets.fromLTRB(14, 92, 15, 0),
+                    alignment: Alignment.center,
+                    child: FlatButton(
+                        onPressed: () => runApp(MaterialApp(home: jugar())),
+                        height: 40,
+                        minWidth: 150,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                        color: Colors.pinkAccent,
+                        child: Text('Jugar', style: TextStyle(fontSize: 23)))))
+          ])))
+    ]));
   }
 }

@@ -46,6 +46,7 @@ class jugar extends StatelessWidget {
                           home: juego(),
                         ))
                       },
+                      minWidth: 25,
                       child: Text(
                         '2P',
                         style: Style,
@@ -62,6 +63,7 @@ class jugar extends StatelessWidget {
                           home: juego(),
                         ))
                       },
+                      minWidth: 25,
                       child: Text(
                         '3P',
                         style: Style,
@@ -78,6 +80,7 @@ class jugar extends StatelessWidget {
                           home: juego(),
                         ))
                       },
+                      minWidth: 25,
                       child: Text(
                         '4P',
                         style: Style,
@@ -94,6 +97,7 @@ class jugar extends StatelessWidget {
                           home: juego(),
                         ))
                       },
+                      minWidth: 25,
                       child: Text(
                         '5P',
                         style: Style,
