@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_preguntados/game/jugadores.dart';
 import 'package:flutter_preguntados/main.dart';
 
 import '../buttons/simple_round_button.dart';
@@ -20,7 +21,7 @@ class Spanol extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               '¿Por qué el resumen suele ser un texto breve? ',
-              style: Style1,
+              style: Style,
             )),
         Container(
             alignment: Alignment.center,
@@ -78,7 +79,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 '¿Por qué el resumen suele ser un texto breve? ',
-                style: Style1,
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
@@ -136,7 +137,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 '¿Cuál de los siguientes aspectos no tienen que ver con la elaboración de resúmenes?',
-                style: Style1,
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
@@ -198,7 +199,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 '¿Qué es una autobiografía?',
-                style: Style1,
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
@@ -254,7 +255,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 '¿Cuántas vocales hay? ',
-                style: Style1,
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
@@ -308,7 +309,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 '¿Cuántas letras tiene el abecedario? ',
-                style: Style1,
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
@@ -362,7 +363,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 '¿Cómo funcionan los signos de interrogación?',
-                style: Style1,
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
@@ -408,7 +409,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 '¿Cómo se usan los verbos en plural? ',
-                style: Style1,
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
@@ -453,7 +454,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 ' ¿Cómo se usa el verbo en singular? ',
-                style: Style1,
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
@@ -498,7 +499,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 ' ¿Qué es un borrador? ',
-                style: Style1,
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
@@ -546,7 +547,7 @@ class Spanol extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 '¿Qué es un cuento? ',
-                style: Style1,
+                style: Style,
               )),
           Container(
               alignment: Alignment.center,
